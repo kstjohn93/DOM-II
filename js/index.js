@@ -53,3 +53,15 @@ let logo = document.querySelector('.logo-heading');
 logo.addEventListener('click', (event) => {
     event.target.style.color = 'tan';
 });
+
+// 9
+logo.addEventListener('dblclick', (event) => {
+    event.target.style.color = 'black';
+});
+
+// 10
+let navItemClick = navItem.forEach(event => {
+    event.addEventListener('click', (event) => {
+        event.target.style.color = 'yellow';
+    });
+}); 
