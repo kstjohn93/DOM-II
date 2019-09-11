@@ -4,6 +4,7 @@ allH2 = document.querySelectorAll('h2');
 let h2Click = allH2.forEach(event => {
     event.addEventListener('click', (event) => {
         event.target.style.backgroundColor = 'green';
+        event.stopPropagation();
     })
 });
 
@@ -60,8 +61,10 @@ logo.addEventListener('dblclick', (event) => {
 });
 
 // 10
-let navItemClick = navItem.forEach(event => {
-    event.addEventListener('click', (event) => {
-        event.target.style.color = 'yellow';
-    });
-}); 
+let navItems = document.querySelectorAll('nav a')
+
+ navItems.forEach( aTag => {
+    aTag.addEventListener('click', event => {
+        event.preventDefault()
+    })
+})
